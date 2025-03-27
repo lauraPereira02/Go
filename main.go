@@ -3,9 +3,8 @@ package main
 import "fmt"
 
 func main (){
-	var numero int
-	fmt.Print("digite um numero")
-	fmt.Scan(&numero)
-	fmt.Prin
-	tln("o numero digitado", numero)
+	var x int = 10
+	x += 5
+	fmt.Print("o valor de x é: ",x)
+	
 }
