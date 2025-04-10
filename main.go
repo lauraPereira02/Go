@@ -1,45 +1,32 @@
-
 package main
 
-import (
-	"fmt"
-	"strings"
-	"sort"
-)
+import "fmt"
 
- func main(){
- greeting := "Hello my friends!"
- fmt.Println(strings.Contains(greeting,"friends"))
- fmt.Println(strings.ReplaceAll(greeting,"Hello", "Hi"))
- fmt.Println(strings.ToUpper(greeting))
- fmt.Println(strings.Index(greeting,"my"))
- fmt.Println(strings.Split(greeting,"!"))
- ages :=[]int {50, 80,10}
- sort.Ints(ages)
- fmt.Println(ages)
- index := sort.SearchInts(ages, 50)
- fmt.Println(index)
- names := []string{"Caroline", "Maicon", "Diego"}
- sort.Strings(names)
- fmt.Println(names)
- fmt.Println(sort.SearchStrings(names,"Caroline"))
- x:=0
+func main() {
+	age := 45
+	fmt.Println(age<= 50)
+   fmt.Println(age >= 50)
+   fmt.Println(age == 50)
+   fmt.Println(age!= 50)
 
-for x <= 5 {fmt.Println(x) 
-	x++}
+   if age < 50 {
+      fmt.Println("menor que 30anos")
+   } else if age < 40 {
+      fmt.Println("menor que 40anos")
+   } else {
+      fmt.Println("não é menor que 40anos")
+   }
 
-for i:=0; i <5; i++{
-	fmt.Println("for 2:", i)}
+   names := []string{"Isa", "madu", "maju", "leo", "lala", "lili" }
 
-for i :=0; i <len(names); i++{
-	fmt.Println(names[i])
-	}
-
-for index, value := range names{
-	fmt.Println("O indice é", index, "o valor é ",value)
-	}
-
-for index, value := range ages{	
-	fmt.Println("O indice é", index, "o valor é ",value)
+   for index, value := range names {
+      if index == 1 {
+         fmt.Println("continue apos a posiçao", index, "e valor", value)
+         continue
+      }
+      if index > 2 {
+         fmt.Println("sair apos" ,index)
+      }
+      fmt.Println("valor: ", value)
+   }
 }
-  }
