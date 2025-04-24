@@ -1,14 +1,22 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt" 
 
-func pegarNome() (string, string){ 
-	return "Barry", "Allen" 
+func main() { 
+capitais := map[string]string{ 
+"SP": "São Paulo", 
+"RJ": "Rio de Janeiro", 
+"ES": "Espirito Santo", 
+"AC": "Acre",
 } 
-	func main() { 
-	nome, sobrenome:= pegarNome() 
-	fmt.Println(nome); 
-	fmt.Println(sobrenome) 
-	}
+capitais ["BH"] = "Belo Horizonte" 
+
+for k,v := range capitais { 
+fmt.Println("Sigla, Nome", k, v) 
+} 
+delete(capitais, "AC")
+
+for k,v := range capitais { 
+	fmt.Println("Sigla, Nome", k, v) 
+	} 
+}
